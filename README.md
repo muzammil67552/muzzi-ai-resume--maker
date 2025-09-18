@@ -1,33 +1,43 @@
 <div align="center">
 
-# ✨ Magic Resume ✨
+# ✨ MUZZI AI RESUME ✨
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Next.js](https://img.shields.io/badge/Next.js-14.0-black)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.0-purple)
 
-简体中文 | [English](./README.en-US.md)
+English | [简体中文](./README.zh-CN.md)
 
 </div>
 
-Magic Resume 是一个现代化的在线简历编辑器，让创建专业简历变得简单有趣。基于 Next.js 和 Motion 构建，支持实时预览和自定义主题。
+**MUZZI AI RESUME** is a modern online resume editor that makes creating professional resumes simple and intelligent. Built with Next.js and Motion, featuring real-time preview and customizable themes powered by AI technology.
+
+## 👨‍💻 About Me
+
+**Project Title:** MUZZI AI RESUME - Create AI-Based Smart and Simple Professional Resume
+
+**Description:** An intelligent resume builder that leverages AI technology to help users create professional, ATS-friendly resumes with ease. Features include 17+ professional templates, real-time preview, AI-powered content optimization, and seamless PDF export functionality.
+
+**Developer:** Muzammil - Full Stack Developer passionate about creating innovative solutions that simplify professional workflows and enhance user experiences through modern web technologies.
 
 ## 📸 项目截图
 
 ![782shots_so](https://github.com/user-attachments/assets/d59f7582-799c-468d-becf-59ee6453acfd)
 
-## ✨ 特性
+## ✨ Features
 
-- 🚀 基于 Next.js 14+ 构建
-- 💫 流畅的动画效果 (Motion)
-- 🎨 自定义主题支持
-- 🌙 深色模式
-- 📤 导出为 PDF
-- 🔄 实时预览
-- 💾 自动保存
-- 🔒 硬盘级存储
+- 🚀 Built with Next.js 14+
+- 🤖 AI-powered content optimization
+- 💫 Smooth animations (Motion)
+- 🎨 17+ Professional templates
+- 🌙 Dark mode support
+- 📤 Direct PDF export
+- 🔄 Real-time preview
+- 💾 Auto-save functionality
+- 🔒 Local storage security
+- 🌍 Multi-language support
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 
 - Next.js 14+
 - TypeScript
@@ -38,61 +48,61 @@ Magic Resume 是一个现代化的在线简历编辑器，让创建专业简历�
 - Shadcn/ui
 - Lucide Icons
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-1. 克隆项目
+1. Clone the repository
 
 ```bash
 git clone git@github.com:JOYCEQL/magic-resume.git
 cd magic-resume
 ```
 
-2. 安装依赖
+2. Install dependencies
 
 ```bash
 pnpm install
 ```
 
-3. 启动开发服务器
+3. Start the development server
 
 ```bash
 pnpm dev
 ```
 
-4. 打开浏览器访问 `http://localhost:3000`
+4. Open your browser and visit `http://localhost:3000`
 
-## 📦 构建打包
+## 📦 Build
 
 ```bash
 pnpm build
 ```
 
-## ⚡ Vercel 部署
+## ⚡ Vercel Deployment
 
-你可以一键部署自己的 Magic Resume 实例：
+You can deploy your own MUZZI AI RESUME instance with one click:
 
-[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FJOYCEQL%2Fmagic-resume)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FJOYCEQL%2Fmagic-resume)
 
-## 🐳 Docker 部署
+## 🐳 Docker Deployment
 
 ### Docker Compose
 
-1. 确保你已经安装了 Docker 和 Docker Compose
+1. Make sure you have Docker and Docker Compose installed
 
-2. 在项目根目录运行：
+2. Run in the project root directory:
 
 ```bash
 docker compose up -d
 ```
 
-这将会：
+This will:
 
-- 自动构建应用镜像
-- 在后台启动容器
+- Automatically build the application image
+- Start the container in the background
 
 ### Docker Hub
 
-最新版本的 Magic Resume 已经发布在 Docker Hub：
+The latest version of MUZZI AI RESUME is available on Docker Hub:
 
 [Docker Hub](https://hub.docker.com/r/siyueqingchen/magic-resume/)
 
@@ -100,34 +110,39 @@ docker compose up -d
 docker pull siyueqingchen/magic-resume:main
 ```
 
-## 📝 开源协议
+## 📝 License
 
-本项目采用 Apache 2.0 协议，但有一些自定义的部分 - 查看 [LICENSE](LICENSE) 了解详情
+This project is licensed under the Apache 2.0 License with some custom parts - see the [LICENSE](LICENSE) file for details
 
-## 🗺️ 路线图
+## 🗺️ Roadmap
 
-- [x] AI 辅助编写
-- [x] 多语言支持
-- [ ] 支持更多简历模板
-- [ ] 更多格式导出
-- [ ] 自定义模型
-- [ ] 智能一页
-- [ ] 导入 PDF, Markdown 等
-- [ ] 在线简历托管
+- [x] AI-assisted writing
+- [x] Multi-language support
+- [x] 17+ Professional templates
+- [x] Direct PDF export
+- [ ] More export formats
+- [ ] Custom AI models
+- [ ] Smart one-page optimization
+- [ ] Import PDF, Markdown, etc.
+- [ ] Online resume hosting
 
-## 📞 联系方式
+## 📞 Contact
 
-可以通过以下方式关注最新动态:
+Stay updated with the latest developments:
 
-- 作者：SiYue
-- X: @GuangzhouY81070
-- Discord: 欢迎加入群组 https://discord.gg/9mWgZrW3VN
-- 用户群：加微信 qingchensiyue
-- 邮箱：18806723365@163.com
-- 项目主页：https://github.com/JOYCEQL/magic-resume
+- **Developer:** Muzammil
+- **Original Author:** SiYue
+- **X:** @GuangzhouY81070
+- **Discord:** Join our community https://discord.gg/9mWgZrW3VN
+- **Email:** 18806723365@163.com
+- **Project Homepage:** https://github.com/JOYCEQL/magic-resume
 
-## 🌟 支持项目
+## 🌟 Support the Project
 
-项目接口成本现正在持续上升中，如果对你有所帮助，可以赞赏作者，支持开源～
+If this project has been helpful to you, consider supporting the development and maintenance costs. Your support helps keep this project free and open source!
 
-<img src="https://github.com/JOYCEQL/picx-images-hosting/raw/master/pintu-fulicat.com-1741081632544.26lmg2uc2m.webp" width="320"  alt="图片描述">
+⭐ **Star this repository** to show your support  
+🐛 **Report issues** to help improve the project  
+🔄 **Share** with others who might find it useful  
+
+<img src="https://github.com/JOYCEQL/picx-images-hosting/raw/master/pintu-fulicat.com-1741081632544.26lmg2uc2m.webp" width="320"  alt="Support the project">
