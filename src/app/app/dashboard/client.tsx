@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Cog, FileText, SwatchBook, Settings, Bot } from "lucide-react";
+import { Cog, FileText, SwatchBook, Settings, Bot, Info } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import {
   Sidebar,
@@ -54,6 +54,11 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       title: t("sidebar.ai"),
       url: "/app/dashboard/ai",
       icon: Bot
+    },
+    {
+      title: "About Us",
+      url: "/app/dashboard/about",
+      icon: Info
     }
   ];
 
