@@ -37,27 +37,27 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const sidebarItems: MenuItem[] = [
     {
       title: t("sidebar.resumes"),
-      url: "/app/dashboard/resumes",
+      url: "/dashboard/resumes",
       icon: FileText
     },
     {
       title: t("sidebar.templates"),
-      url: "/app/dashboard/templates",
+      url: "/dashboard/templates",
       icon: SwatchBook
     },
     {
       title: t("sidebar.settings"),
-      url: "/app/dashboard/settings",
+      url: "/dashboard/settings",
       icon: Settings
     },
     {
       title: t("sidebar.ai"),
-      url: "/app/dashboard/ai",
+      url: "/dashboard/ai",
       icon: Bot
     },
     {
       title: "About Us",
-      url: "/app/dashboard/about",
+      url: "/dashboard/about",
       icon: Info
     }
   ];
