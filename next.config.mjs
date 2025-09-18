@@ -9,7 +9,6 @@ const config = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: "standalone",
 };
 
 export default withNextIntl(config);
