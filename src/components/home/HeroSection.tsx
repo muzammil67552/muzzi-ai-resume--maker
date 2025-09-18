@@ -61,8 +61,8 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-blue-500/5 to-purple-500/5 rounded-2xl blur-xl" />
               <div className="relative w-full h-full">
                 <Image
-                  src="/web-shot.png"
-                  alt="Resume Editor"
+                  src="/professional-resume.svg"
+                  alt="Professional Resume Template"
                   fill
                   className="object-contain object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"

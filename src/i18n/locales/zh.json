@@ -1,6 +1,6 @@
 {
   "common": {
-    "title": "魔方简历",
+    "title": "MUZZI AI",
     "subtitle": "AI 驱动简历编辑器",
     "description": "魔方简历是一款开源的简历编辑器，免费，隐私优先。无需注册登录，数据完全存储在本地，支持数据导出备份，确保您的简历数据随时可用。",
     "dashboard": "仪表盘",
@@ -11,7 +11,7 @@
   },
   "home": {
     "header": {
-      "title": "魔方简历",
+      "title": "MUZZI AI",
       "startButton": "开始使用",
       "features": "功能特点",
       "pricing": "定价",
@@ -181,6 +181,66 @@
       "timeline": {
         "name": "时间轴布局",
         "description": "时间轴风格，突出经历的时间顺序"
+      },
+      "creative": {
+        "name": "创意模板",
+        "description": "现代创意设计，适合设计师和创意工作者"
+      },
+      "executive": {
+        "name": "高管模板",
+        "description": "专业高端设计，适合高级管理人员"
+      },
+      "minimal": {
+        "name": "极简模板",
+        "description": "简洁优雅，突出内容本身"
+      },
+      "elegant": {
+        "name": "优雅模板",
+        "description": "优雅精致，适合金融和咨询行业"
+      },
+      "tech": {
+        "name": "科技模板",
+        "description": "现代科技风格，适合IT和技术人员"
+      },
+      "artistic": {
+        "name": "艺术模板",
+        "description": "创意艺术设计，适合艺术家和设计师"
+      },
+      "corporate": {
+        "name": "企业模板",
+        "description": "传统企业风格，适合大型企业申请"
+      },
+      "academic": {
+        "name": "学术模板",
+        "description": "学术研究风格，适合教育和研究领域"
+      },
+      "startup": {
+        "name": "创业模板",
+        "description": "创业公司风格，适合创业和创新行业"
+      },
+      "medical": {
+        "name": "医疗模板",
+        "description": "专业医疗风格，适合医疗健康行业"
+      },
+      "legal": {
+        "name": "法律模板",
+        "description": "专业法律风格，适合法律和政府部门"
+      },
+      "sales": {
+        "name": "销售模板",
+        "description": "销售导向设计，适合销售和市场人员"
+      },
+      "consulting": {
+        "name": "咨询模板",
+        "description": "专业咨询风格，适合咨询和服务行业"
+      },
+      "finance": {
+        "name": "金融模板",
+        "description": "金融专业风格，适合银行和投资行业"
+      },
+      "education": {
+        "name": "教育模板",
+        "description": "教育专业风格，适合教师和教育工作者"
       }
     }
   },

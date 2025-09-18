@@ -99,46 +99,63 @@ const PdfExport = () => {
         throw new Error("PDF element not found");
       }
 
-      const clonedElement = pdfElement.cloneNode(true) as HTMLElement;
-
-      const pageBreakLines =
-        clonedElement.querySelectorAll<HTMLElement>(".page-break-line");
-      pageBreakLines.forEach((line) => {
-        line.style.display = "none";
-      });
-
-      const [styles] = await Promise.all([
-        getOptimizedStyles(),
-        optimizeImages(clonedElement)
+      // Dynamically import the libraries
+      const [{ default: html2canvas }, { default: jsPDF }] = await Promise.all([
+        import('html2canvas'),
+        import('jspdf')
       ]);
 
-      const response = await fetch(PDF_EXPORT_CONFIG.SERVER_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          content: clonedElement.outerHTML,
-          styles,
-          margin: globalSettings.pagePadding
-        }),
-        // 允许跨域请求
-        mode: "cors",
-        signal: AbortSignal.timeout(PDF_EXPORT_CONFIG.TIMEOUT)
+      // Configure html2canvas options for better quality
+      const canvas = await html2canvas(pdfElement, {
+        scale: 2, // Higher resolution
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: '#ffffff',
+        width: pdfElement.scrollWidth,
+        height: pdfElement.scrollHeight,
+        scrollX: 0,
+        scrollY: 0
       });
 
-      if (!response.ok) {
-        throw new Error(`PDF generation failed: ${response.status}`);
+      // Calculate dimensions for A4 page
+      const imgWidth = 210; // A4 width in mm
+      const pageHeight = 295; // A4 height in mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      let heightLeft = imgHeight;
+
+      // Create PDF
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+
+      // Add first page
+      pdf.addImage(
+        canvas.toDataURL('image/png'),
+        'PNG',
+        0,
+        position,
+        imgWidth,
+        imgHeight
+      );
+      heightLeft -= pageHeight;
+
+      // Add additional pages if content is longer than one page
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(
+          canvas.toDataURL('image/png'),
+          'PNG',
+          0,
+          position,
+          imgWidth,
+          imgHeight
+        );
+        heightLeft -= pageHeight;
       }
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `${title}.pdf`;
-      link.click();
-
-      window.URL.revokeObjectURL(url);
+      // Download the PDF
+      pdf.save(`${title || 'resume'}.pdf`);
+      
       console.log(`Total export took ${performance.now() - exportStartTime}ms`);
       toast.success(t("toast.success"));
     } catch (error) {

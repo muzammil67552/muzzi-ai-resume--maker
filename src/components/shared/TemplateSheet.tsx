@@ -13,17 +13,9 @@ import {
 import { cn } from "@/lib/utils";
 import { DEFAULT_TEMPLATES } from "@/config";
 import { useResumeStore } from "@/store/useResumeStore";
-import classic from "@/assets/images/template-cover/classic.png";
-import modern from "@/assets/images/template-cover/modern.png";
-import leftRight from "@/assets/images/template-cover/left-right.png";
-import timeline from "@/assets/images/template-cover/timeline.png";
+import ResumeTemplateComponent from "@/components/templates";
 
-const templateImages: { [key: string]: any } = {
-  classic,
-  modern,
-  "left-right": leftRight,
-  timeline
-};
+
 
 const TemplateSheet = () => {
   const t = useTranslations("templates");
@@ -45,32 +37,44 @@ const TemplateSheet = () => {
         {/* 解决警告问题 */}
         <SheetDescription></SheetDescription>
 
-        <div className="grid grid-cols-3 gap-4 mt-4">
-          {DEFAULT_TEMPLATES.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setTemplate(t.id)}
-              className={cn(
-                "relative group rounded-lg overflow-hidden border-2 transition-all duration-200 hover:scale-[1.02]",
-                t.id === currentTemplate.id
-                  ? "border-primary dark:border-primary shadow-lg dark:shadow-primary/30"
-                  : "dark:border-neutral-800 dark:hover:border-neutral-700 border-gray-100 hover:border-gray-200"
-              )}
-            >
-              <img
-                src={templateImages[t.id].src}
-                alt={t.name}
-                className="w-full h-auto"
-              />
-              {t.id === currentTemplate.id && (
-                <motion.div
-                  layoutId="template-selected"
-                  className="absolute inset-0 flex items-center justify-center bg-black/20 dark:bg-white/30"
-                >
-                  <Layout className="w-6 h-6 text-white dark:text-primary" />
-                </motion.div>
-              )}
-            </button>
+        <div className="grid grid-cols-2 gap-4 mt-4 max-h-[80vh] overflow-y-auto">
+          {DEFAULT_TEMPLATES.map((template) => (
+            <div key={template.id} className="space-y-2">
+              <div className="text-sm font-medium text-center">
+                {t(`${template.id}.name`)}
+              </div>
+              <button
+                onClick={() => setTemplate(template.id)}
+                className={cn(
+                  "relative group rounded-lg overflow-hidden border-2 transition-all duration-200 hover:scale-[1.02] w-full",
+                  template.id === currentTemplate.id
+                    ? "border-primary dark:border-primary shadow-lg dark:shadow-primary/30"
+                    : "dark:border-neutral-800 dark:hover:border-neutral-700 border-gray-100 hover:border-gray-200"
+                )}
+              >
+                <div className="w-full h-48 overflow-hidden bg-white">
+                  <div className="transform scale-[0.15] origin-top-left w-[667%] h-[667%]">
+                    {activeResume && (
+                      <ResumeTemplateComponent
+                        data={activeResume}
+                        template={template}
+                      />
+                    )}
+                  </div>
+                </div>
+                {template.id === currentTemplate.id && (
+                  <motion.div
+                    layoutId="template-selected"
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 dark:bg-white/30"
+                  >
+                    <Layout className="w-6 h-6 text-white dark:text-primary" />
+                  </motion.div>
+                )}
+              </button>
+              <div className="text-xs text-muted-foreground text-center px-2">
+                {t(`${template.id}.description`)}
+              </div>
+            </div>
           ))}
         </div>
       </SheetContent>

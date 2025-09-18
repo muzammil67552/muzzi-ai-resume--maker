@@ -31,7 +31,7 @@ export default function LandingHeader() {
               onClick={() => (window.location.href = `/${locale}/`)}
             >
               <Logo size={32} />
-              <span className="font-bold text-[24px]">{t("header.title")}</span>
+              <span className="font-bold text-[24px]">{t("header.title")} RESUME</span>
             </div>
 
             <div className="hidden md:flex items-center gap-4">

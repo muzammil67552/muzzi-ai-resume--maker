@@ -8,6 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px] px-4">
         <div className="text-center text-sm text-muted-foreground">
           <p>{t("footer.copyright")}</p>
+          <p className="mt-2">Developed by Muzammil</p>
         </div>
       </div>
     </footer>

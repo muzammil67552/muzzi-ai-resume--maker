@@ -1,6 +1,6 @@
 {
   "common": {
-    "title": "Magic Resume",
+    "title": "MUZZI AI",
     "subtitle": "AI Driven Resume Editor",
     "description": "Magic Resume is an open source resume editor, free, privacy-first. No registration required, all data stored locally, support data backup and export, ensuring your resume data is always available.",
     "dashboard": "Dashboard",
@@ -11,7 +11,7 @@
   },
   "home": {
     "header": {
-      "title": "Magic Resume",
+      "title": "MUZZI AI",
       "startButton": "Get Started",
       "features": "Features",
       "pricing": "Pricing",
@@ -22,7 +22,7 @@
     },
     "hero": {
       "badge": "Smart Resume Creation",
-      "title": "Make Resume Creation Simple and Smart",
+      "title": "Create AI-Based Smart and Simple Professional Resume",
       "subtitle": "Magic Resume uses AI technology to help you quickly create professional resumes. No registration required, free to use, with secure data storage.",
       "cta": "Get Started",
       "secondary": "Browse Templates"
@@ -180,6 +180,66 @@
       "timeline": {
         "name": "Timeline Layout",
         "description": "Timeline style, emphasizing chronological order of experiences"
+      },
+      "creative": {
+        "name": "Creative",
+        "description": "Modern creative design, perfect for designers and creative professionals"
+      },
+      "executive": {
+        "name": "Executive",
+        "description": "Professional high-end design, suitable for senior management"
+      },
+      "minimal": {
+        "name": "Minimal",
+        "description": "Clean and elegant, focusing on content itself"
+      },
+      "elegant": {
+        "name": "Elegant",
+        "description": "Elegant and refined, perfect for finance and consulting"
+      },
+      "tech": {
+        "name": "Tech",
+        "description": "Modern tech style, suitable for IT and technical professionals"
+      },
+      "artistic": {
+        "name": "Artistic",
+        "description": "Creative artistic design, perfect for artists and designers"
+      },
+      "corporate": {
+        "name": "Corporate",
+        "description": "Traditional corporate style, suitable for large enterprise applications"
+      },
+      "academic": {
+        "name": "Academic",
+        "description": "Academic research style, suitable for education and research fields"
+      },
+      "startup": {
+        "name": "Startup",
+        "description": "Startup company style, suitable for entrepreneurship and innovation industries"
+      },
+      "medical": {
+        "name": "Medical",
+        "description": "Professional medical style, suitable for healthcare industry"
+      },
+      "legal": {
+        "name": "Legal",
+        "description": "Professional legal style, suitable for law and government sectors"
+      },
+      "sales": {
+        "name": "Sales",
+        "description": "Sales-oriented design, suitable for sales and marketing professionals"
+      },
+      "consulting": {
+        "name": "Consulting",
+        "description": "Professional consulting style, suitable for consulting and service industries"
+      },
+      "finance": {
+        "name": "Finance",
+        "description": "Financial professional style, suitable for banking and investment industries"
+      },
+      "education": {
+        "name": "Education",
+        "description": "Educational professional style, suitable for teachers and education workers"
       }
     }
   },
